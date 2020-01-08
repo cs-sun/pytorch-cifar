@@ -1,5 +1,5 @@
-# Enviroment Setup Note by CSSUN
-Sience the 'Pillow' lib needed for 'torchvision' now having a [issue](https://github.com/pytorch/vision/issues/1712), causing the ERROE 'ImportError: cannot import name 'PILLOW_VERSION' from 'PIL' ', please DON'T use Pillow lib version no less than '7.0'.
+# Enviroment Setup Note by CSSUN in 2020-01-08
+Sience the `Pillow` lib needed for `torchvision` now having a [issue](https://github.com/pytorch/vision/issues/1712), causing the ERROE `ImportError: cannot import name 'PILLOW_VERSION' from 'PIL' `, please DON'T use Pillow lib version no less than `7.0`. 
 
 # Train CIFAR10 with PyTorch
 
