@@ -1,5 +1,7 @@
-# Enviroment Setup Note by CSSUN in 2020-01-08
-Sience the `Pillow` lib needed for `torchvision` now having a [issue](https://github.com/pytorch/vision/issues/1712), causing the ERROE `ImportError: cannot import name 'PILLOW_VERSION' from 'PIL' `, please DON'T use Pillow lib version no less than `7.0`. 
+# Enviroment Setup Note 
+Sience the `Pillow` lib needed for `torchvision` now having a [issue](https://github.com/pytorch/vision/issues/1712), causing the ERROE `ImportError: cannot import name 'PILLOW_VERSION' from 'PIL' `, please DON'T use Pillow lib version no less than `7.0`.    
+
+> 2020-01-08
 
 # Train CIFAR10 with PyTorch
 
@@ -24,9 +26,16 @@ I'm playing with [PyTorch](http://pytorch.org/) on the CIFAR10 dataset.
 | [DPN92](https://arxiv.org/abs/1707.01629)             | 95.16%      |
 
 ## Learning rate adjustment
-I manually change the `lr` during training:
-- `0.1` for epoch `[0,150)`
-- `0.01` for epoch `[150,250)`
-- `0.001` for epoch `[250,350)`
+Using ` torch.optim.lr_scheduler.MultiStepLR`
+
+Multi step learning rate decay
+
+lr = 0.1     if epoch < 150
+
+lr = 0.01    if 150 <= epoch < 250
+
+lr = 0.001   if epoch >= 250
+
+
 
 Resume the training with `python main.py --resume --lr=0.01`
